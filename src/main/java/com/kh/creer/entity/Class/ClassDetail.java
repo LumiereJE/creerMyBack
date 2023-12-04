@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "classDetail")
@@ -22,8 +23,19 @@ public class ClassDetail {
     private String classArea;           // 지역
     private Integer reviewCount;        // 리뷰 갯수
 
-    // 써진 후기를 가져오는 것도 객체 하나하나 써줘야 하는지?
-
+    // 써진 후기를 가져오는 옴
+    @JoinColumn(name = "classReserve_id")
+    private ClassReview userNick;
+    @JoinColumn(name = "classReserve_id")
+    private ClassReview profileImg;
+    @JoinColumn(name = "classReserve_id")
+    private ClassReview classReviewDate;
+    @JoinColumn(name = "classReserve_id")
+    private ClassReview reviewStar;
+    @JoinColumn(name = "classReserve_id")
+    private ClassReview classReviewTxt;
+    @JoinColumn(name = "classReserve_id")
+    private ClassReview classReviewImg;
 
     private String user_nick;           // member가 만들어지면 FK로 가져오는거 아닌감 . ..
     private Integer classLike;          // 좋아요
