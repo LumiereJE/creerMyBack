@@ -1,5 +1,6 @@
 package com.kh.creer.entity.Class;
 
+import com.kh.creer.entity.Member;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

@@ -38,7 +38,7 @@ public class MemberService {
                     () -> new RuntimeException("해당 회원이 존재하지 않습니다.")
             );
             member.setName(memberDto.getName());
-            member.setImage(memberDto.getImage());
+            member.setUserProfileImg(memberDto.getUserProfileImg());
             memberRepository.save(member);
             return true;
         } catch (Exception e) {
@@ -87,7 +87,7 @@ public class MemberService {
         MemberResDto memberDto = new MemberResDto();
         memberDto.setEmail(member.getUserEmail());
         memberDto.setName(member.getName());
-        memberDto.setImage(member.getImage());
+        memberDto.setImage(member.getUserProfileImg());
         memberDto.setRegDate(member.getRegDate());
         return memberDto;
     }

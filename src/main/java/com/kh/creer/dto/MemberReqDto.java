@@ -19,7 +19,7 @@ public class MemberReqDto {
     private String userEmail;
     private String password;
     private String name;
-    private String image;
+    private String userProfileImg;
     // MemberReqDto -> Member
     public Member toEntity(PasswordEncoder passwordEncoder) { // 비밀번호 암호화, DI
         return Member.builder() // PasswordEncoder를 매개변수로 받아와서 회원의 비밀번호를 암호화하여 Member 객체를 생성(build사용)
@@ -29,7 +29,7 @@ public class MemberReqDto {
                 .userEmail(userEmail)
                 .password(passwordEncoder.encode(password)) // 암호화 하는 부분, 보안상의 이유로 사용자의 비밀번호를 평문으로 저장하지 않고 암호화된 형태로 저장하기 위한 과정
                 .name(name)
-                .image(image)
+                .userProfileImg(userProfileImg)
                 .authority(Authority.ROLE_USER) // 회원 권한(일반 회원)
                 .build(); // Member 객체의 생성이 완료되면, build() 메소드를 호출하여 최종적으로 Member 객체를 생성하고 반환
     }

@@ -22,7 +22,7 @@ public class MemberResDto {
         return MemberResDto.builder() //MemberResDto 클래스에 정의된 빌더 패턴을 사용하여 MemberResDto 객체를 생성
                 .name(member.getName()) //getName() 메소드를 호출하여 이름을 설정
                 .email(member.getUserEmail()) // getEmail() 메소드를 호출하여 이메일을 설정
-                .image(member.getImage()) // getImage() 메소드를 호출하여 이미지 정보를 설정
+                .image(member.getUserProfileImg()) // getImage() 메소드를 호출하여 이미지 정보를 설정
                 .regDate(member.getRegDate()) // getRegDate() 메소드를 호출하여 등록일 정보를 설정
                 .build(); // 설정된 정보를 바탕으로 최종적으로 MemberResDto 객체를 생성
     }

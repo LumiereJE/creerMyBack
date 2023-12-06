@@ -11,9 +11,9 @@ import java.time.LocalDateTime;
 @Builder  // 클래스 레벨에 붙이거나 생성자에 붙여주면 파라미터를 활용하여 빌더 패턴을 자동으로 생성해줌
 public class GoodsReviewDto {
     private Long goodsReviewId;
-    private Integer goodsDetailId;          // 물품 번호 찾기
-    private String userNickname;            // 구매자 닉네임
-    private String userProfile;             // 구매자 프사
+    private Integer goodsDetailId;          // FK-물품 번호 찾기
+    private String userNickname;            // FK-구매자 닉네임
+    private String userProfile;             // FK-구매자 프사
     private LocalDateTime reviewDate;       // 후기 작성 시각
     private String reviewStar;              // 별점
     private String reviewImg;               // 후기 사진
