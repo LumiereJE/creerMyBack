@@ -23,26 +23,24 @@ public class ClassDetail {
     private String classArea;           // 지역
     private Integer reviewCount;        // 리뷰 갯수
 
-    // 써진 후기를 가져오는 옴
-    @JoinColumn(name = "classReserve_id")
-    private ClassReview userNick;
-    @JoinColumn(name = "classReserve_id")
-    private ClassReview profileImg;
-    @JoinColumn(name = "classReserve_id")
-    private ClassReview classReviewDate;
-    @JoinColumn(name = "classReserve_id")
-    private ClassReview reviewStar;
-    @JoinColumn(name = "classReserve_id")
-    private ClassReview classReviewTxt;
-    @JoinColumn(name = "classReserve_id")
-    private ClassReview classReviewImg;
+//    // member에서 가져옴
+//    @JoinColumn(name = "member_id")
+//    private Member member;           // member가 만들어지면 FK로 가져오는거 아닌감 . ..
 
-    private String user_nick;           // member가 만들어지면 FK로 가져오는거 아닌감 . ..
     private Integer classLike;          // 좋아요
     private Integer classPrice;         // 가격
     private String classLevel;          // 난이도
     private String classRunningTime;    // 소요시간
     private String classPeople;         // 예약 가능 인원
+
+//    // 리뷰에 ManyToOne걸어야 함
+//    // 들어가야 하는내용 나열은 DTO, 경로는 Entity... 맞나...맞나 맞나...
+//    @JoinColumn(name = "classReview_id") // manyToOne에서만 가능
+//    private ClassReview classReview;
+
+
+
+
 
 
 

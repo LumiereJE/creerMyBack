@@ -15,13 +15,14 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfiguration {
+
     @Bean
     public Docket api() {
         log.info("스웨거 api() 함수 호출 !!");
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.kh.jpatotalapp"))
+                .apis(RequestHandlerSelectors.basePackage("com.kh.finalEx"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -35,4 +36,3 @@ public class SwaggerConfiguration {
                 .build();
     }
 }
-

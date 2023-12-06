@@ -4,27 +4,28 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "classReviewId")
+@Table(name = "classReview")
 @Getter @Setter @ToString
 @NoArgsConstructor
 public class ClassReview {
     @Id
+    @Column(name = "classReview_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long classReviewId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "classDetail_id")
-    private ClassDetail classTitle;
-    private ClassDetail classImg;
+    private ClassDetail classDetail;
 
-    // member에서 가져오기
-    private String userNick;
-    private String profileImg;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_id")
+    private Member member;
 
     private LocalDateTime classReviewDate;
     private Integer reviewStar;
