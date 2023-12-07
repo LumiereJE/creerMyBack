@@ -1,5 +1,5 @@
 package com.kh.creer.controller;
-import com.kh.creer.entity.GoodsEntity.GoodsDetail;
+import com.kh.creer.dto.GoodsDto.GoodsDetailDto;
 import com.kh.creer.service.GoodsService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,8 +19,8 @@ public class GoodsController {
 
     // 굿즈 전체 조회
     @GetMapping("/list")
-    public ResponseEntity<List<GoodsDetail>> goodsList() {
-        List<GoodsDetail> list = goodsService.getGoodsList();
+    public ResponseEntity<List<GoodsDetailDto>> goodsList() {
+        List<GoodsDetailDto> list = goodsService.getGoodsList();
         return ResponseEntity.ok(list);
     }
 }
