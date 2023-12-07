@@ -1,16 +1,13 @@
 package com.kh.creer.entity.GoodsEntity;
 
 import com.kh.creer.entity.Member;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "goodsItem")
+@Table(name = "goodsDetail")
 @Getter @Setter
 @ToString
 @NoArgsConstructor
@@ -39,10 +36,10 @@ public class GoodsDetail {
     private Integer itemRest;           // 남은 수량
 
     private LocalDateTime goodsDate;
-    @PrePersist
-    public void perPersist() {
-        goodsDate = LocalDateTime.now();
-    }
+//    @PrePersist -> 에러남
+//    public void perPersist() {
+//        goodsDate = LocalDateTime.now();
+//    }
 
 
 }

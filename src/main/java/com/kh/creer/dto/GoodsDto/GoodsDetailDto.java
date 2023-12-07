@@ -13,13 +13,13 @@ public class GoodsDetailDto {
     private String goodsRefund;         // 상품 배송/환불/교환 안내
 
     private String goodsTitle;          // 상품 이름
-    private String userNickname;        // 판매자(유저) 닉네임
+    private String nickName;        // 판매자(유저) 닉네임
     private String userProfileImg;      // 판매자(유저) 프로필사진
     private String goodsPrice;          // 상품 가격
 //    private String reviewStarAvg;       // 별점 평균
 //    private Integer reviewCount;        // 리뷰 갯수
     private String goodsDeliveryFee;    // 배달비
-    private Integer itemRest;           // 남은 수량
+//    private Integer goodsRest;          // 남은 수량...은 여력 되면 하자... 결제 만들고..
 
 
 }
